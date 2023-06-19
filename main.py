@@ -21,7 +21,7 @@ def get_lemma_POS(item): #лемматизация и частеречная р�
     else:
         return ''
 
-def normalize_text(read_docx_file_path, write_file_path) #удаление из текста лишних символов для упрощения морфологической обработки
+def normalize_text(read_docx_file_path, write_file_path): #удаление из текста лишних символов для упрощения морфологической обработки
     text = docx2txt.process(read_docx_file_path)
     norm_text = sub('\d', '', text)
     norm_text = sub('\n+|\s+', ' ', norm_text)
